@@ -16,4 +16,5 @@
 
     "selfblock.G54getBlue|block": "讀取 G54 Blue data",
 
+    "selfblock.CJMCU8118TH_IDno|block": "讀取 CJMCU-8118 TH IDno",
 }
