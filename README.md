@@ -1,6 +1,6 @@
-﻿# selfblock
+# selfblock
 
-這是自製的 micro:bit Sensor 積木
+這是自製的 micro:bit 積木
 
 ## License
 
@@ -12,5 +12,5 @@ MIT
 (The metadata above is needed for package search.)
 
 ```package
-selfblock=github.com/henrywycheng/pxt-selfblock
+selfblock=github.com/tsjeng45/pxt-selfblock
 ```
