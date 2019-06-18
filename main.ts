@@ -119,7 +119,7 @@ namespace selfblock {
 
 	basic.pause(200)
 
-	pins.i2cWriteNumber(41,182,NumberFormat.UIn8LE,false)
+	pins.i2cWriteNumber(41,182,NumberFormat.UInt8LE,false)
 
 	basic.pause(200)
 
