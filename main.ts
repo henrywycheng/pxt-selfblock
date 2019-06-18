@@ -15,9 +15,7 @@ namespace selfblock {
     }
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x12 command 0x92 return byte */
-    
     //% blockId="G54getIDno" block="G54 get IDno"
-    
     //% blockGap=2 weight=88
     export function G54getIDno(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
@@ -94,20 +92,20 @@ namespace selfblock {
         return Blue
  
    }
-    /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0xFF command 0xFF return 0x1050 */
+    /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0xFF return 0x1050 */
     //% blockId="CJMCU8118THIDno" block="CJMCU8118 TH IDno"
     //% blockGap=2 weight=79
-    
     export function CJMCU8118THIDno(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
 	basic.pause(200)
 	pins.i2cWriteNumber(64,255,NumberFormat.UInt8LE,false)
 	basic.pause(200)
-	return pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	THIDno = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	return THIDno
     }
 
-    /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0x02 command 0x02 return 2 bytes */
+    /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0x02 return 2 bytes */
     //% blockId="CJMCU8118THConfig" block="CJMCU8118 TH Config"
     //% blockGap=2 weight=78
     export function CJMCU8118THConfig(): number {
@@ -116,7 +114,8 @@ namespace selfblock {
 	basic.pause(200)
 	pins.i2cWriteNumber(64,2,NumberFormat.UInt8LE,false)
 	basic.pause(200)
-	return pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	THConfig = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	return THConfig
     }
 
 }
