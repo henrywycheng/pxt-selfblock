@@ -187,7 +187,7 @@ namespace selfblock {
 
     //% blockGap=2 weight=79
     
-    export function CJMCU8118THIDno() {
+    export function CJMCU8118THIDno(): number {
 
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 
@@ -209,7 +209,7 @@ namespace selfblock {
 
     //% blockGap=2 weight=78
     
-    export function CJMCU8118THConfig() {
+    export function CJMCU8118THConfig(): number {
 
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 
