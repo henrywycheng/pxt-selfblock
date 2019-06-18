@@ -205,7 +205,7 @@ namespace selfblock {
 
     /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0x02 command 0x02 return UInt16BE */
 
-    //% blockId="CJMCU8118TH_Config" block="CJMCU8118(TH) Config"
+    //% blockId="CJMCU8118TH_Config" block="CJMCU8118 TH Config"
 
     //% blockGap=2 weight=79
     
