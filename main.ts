@@ -16,7 +16,7 @@ namespace selfblock {
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x12 command 0x92 return byte */
     //% blockId="G54getIDno" block="G54 get IDno"
-    //% blockGap=2 weight=88
+    //% blockGap=2 weight=88 blockExternalInputs=true
     export function G54getIDno(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
@@ -29,7 +29,7 @@ namespace selfblock {
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x13 command 0x93 return byte */
     //% blockId="G54getStatus" block="G54 get Status"
-    //% blockGap=2 weight=87
+    //% blockGap=2 weight=87 blockExternalInputs=true
     export function G54getStatus(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
@@ -42,7 +42,7 @@ namespace selfblock {
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x14-15 command 0x94-95 return byte */
     //% blockId="G54getClear" block="G54 get Clear data"
-    //% blockGap=2 weight=86
+    //% blockGap=2 weight=86 blockExternalInputs=true
     export function G54getClear(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
@@ -55,7 +55,7 @@ namespace selfblock {
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x16-17 command 0x96-97 return byte */
     //% blockId="G54getRed" block="G54 get Red data"
-    //% blockGap=2 weight=85
+    //% blockGap=2 weight=85 blockExternalInputs=true
     export function G54getRed(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
@@ -68,7 +68,7 @@ namespace selfblock {
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x18-19 command 0x98-99 return byte */
     //% blockId="G54getGreen" block="G54 get Green data"
-    //% blockGap=2 weight=84
+    //% blockGap=2 weight=84 blockExternalInputs=true
     export function G54getGreen(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
@@ -81,7 +81,7 @@ namespace selfblock {
 
     /* G54 TCS34725 RGBC color sensor addr 0x29 register 0x1A-1B command 0x9A-9B return byte */
     //% blockId="G54getBlue" block="G54 get Blue data"
-    //% blockGap=2 weight=83
+    //% blockGap=2 weight=83 blockExternalInputs=true
     export function G54getBlue(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
