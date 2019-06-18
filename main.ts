@@ -1,4 +1,4 @@
-//% weight=0 color=#3CB371 icon="\uf2b9" block="SelfBlock"
+//% weight=0 color=#3CB371 icon="\uf2b9" block="SensorBlock"
 
 
 
