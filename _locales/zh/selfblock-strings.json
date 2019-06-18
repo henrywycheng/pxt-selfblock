@@ -7,6 +7,6 @@
     "selfblock.G54getRed|block": "讀取 G54 Red data",
     "selfblock.G54getGreen|block": "讀取 G54 Green data",
     "selfblock.G54getBlue|block": "讀取 G54 Blue data",
-    "selfblock.CJMCU8118TH_IDno|block": "讀取 CJMCU-8118 TH IDno",
-    "selfblock.CJMCU8118TH_Config|block": "讀取 CJMCU-8118 TH Config",
+    "selfblock.CJMCU8118THIDno|block": "讀取 CJMCU-8118 TH IDno",
+    "selfblock.CJMCU8118THConfig|block": "讀取 CJMCU-8118 TH Config",
 }
