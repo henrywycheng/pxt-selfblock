@@ -19,6 +19,7 @@
     "selfblock.CJMCUTHIDno|block": "讀取 CJMCU8118 TH IDno",
     "selfblock.CJMCUTHConfig|block": "讀取 CJMCU8118 TH Config",
     "selfblock.CJMCUTHgetTemp|block": "讀取 CJMCU8118 TH get Temperature",
-    "selfblock.CJMCUTHgetHumid|block": "讀取 CJMCU8118 TH get Humidity"
-
+    "selfblock.CJMCUTHgetHumid|block": "讀取 CJMCU8118 TH get Humidity",
+    "selfblock.CJMCUGasIDno|block": "讀取 CJMCU8118 Gas IDno",
+    "selfblock.CJMCUGasStatus|block": "讀取 CJMCU8118 Gas Status",
 }

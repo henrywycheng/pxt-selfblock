@@ -146,5 +146,34 @@ namespace selfblock {
 	basic.pause(200)
 	return Math.round(Temperature / 65536 * 100)
     }
+
+    /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0x20 return 1 byte */
+    //% blockId="CJMCUGasIDno" block="CJMCU8118 Gas IDno"
+    //% blockGap=2 weight=75
+    export function CJMCUGasIDno(): number {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,32,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	let GasIDno = pins.i2cReadNumber(90, NumberFormat.UInt8LE, false)
+	basic.pause(200)
+	return GasIDno
+    }
+
+    /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0x00 return 1 byte */
+    //% blockId="CJMCUGasStatus" block="CJMCU8118 Gas Status"
+    //% blockGap=2 weight=75
+    export function CJMCUGasStatus(): number {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,0,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	let GasStatus = pins.i2cReadNumber(90, NumberFormat.UInt8LE, false)
+	basic.pause(200)
+	return GasStatus
+    }
+
 }
 
