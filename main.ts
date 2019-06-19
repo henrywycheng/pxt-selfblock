@@ -92,6 +92,31 @@ namespace selfblock {
  
    }
 
+    /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0xFF return 0x1050 */
+    //% blockId="CJMCU8118THIDno" block="CJMCU8118 TH IDno"
+    //% blockGap=2 weight=79
+    export function CJMCU8118THIDno(): number {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(64,255,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	THIDno = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	return THIDno
+    }
+
+    /* CJMCU-8118 HDC1080 Temp&Humidity sensor addr 0x40 register 0x02 return 2 bytes */
+    //% blockId="CJMCU8118THConfig" block="CJMCU8118 TH Config"
+    //% blockGap=2 weight=78
+    export function CJMCU8118THConfig(): number {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(64,2,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	THConfig = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	return THConfig
+    }
 
 }
 
