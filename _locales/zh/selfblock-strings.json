@@ -24,5 +24,5 @@
     "selfblock.CJMCUGasAppStart|block": "啟動 CJMCU8118 Gas App Start",
     "selfblock.CJMCUGasStatus|block": "讀取 CJMCU8118 Gas Status",
     "selfblock.CJMCUGasErrID|block": "讀取 CJMCU8118 Gas ErrorID",
-    "selfblock.CJMCUGasDrvMode|block": "啟動 CJMCU8118 Gas Drive Mode 1",
+    "selfblock.CJMCUGasDrvMode|block": "啟動 CJMCU8118 Gas DrvMode1",
 }
