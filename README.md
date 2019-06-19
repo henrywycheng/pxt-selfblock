@@ -1,6 +1,6 @@
-# selfblock
+﻿# selfblock
 
-這是自製的 micro:bit 積木
+這是自製的 micro:bit Sensor 積木
 
 ## License
 
