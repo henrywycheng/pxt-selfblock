@@ -101,7 +101,7 @@ namespace selfblock {
 	basic.pause(200)
 	pins.i2cWriteNumber(64,255,NumberFormat.UInt8LE,false)
 	basic.pause(200)
-	THIDno = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	let THIDno = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
 	return THIDno
     }
 
@@ -114,7 +114,7 @@ namespace selfblock {
 	basic.pause(200)
 	pins.i2cWriteNumber(64,2,NumberFormat.UInt8LE,false)
 	basic.pause(200)
-	THConfig = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
+	let THConfig = pins.i2cReadNumber(64, NumberFormat.UInt16BE, false)
 	return THConfig
     }
 
