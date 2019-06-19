@@ -170,8 +170,6 @@ namespace selfblock {
 	basic.pause(200)
 	pins.i2cWriteNumber(90,244,NumberFormat.UInt8LE,false)
 	basic.pause(200)
-	pins.i2cWriteNumber(90,0,NumberFormat.UInt8LE,false)
-	basic.pause(200)
     }
 
     /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0x00 return 1 byte */
