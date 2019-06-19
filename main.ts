@@ -202,5 +202,18 @@ namespace selfblock {
 	return GasErrID
     }
 
+    /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0x01 */
+    //% blockId="CJMCUGasDriveMode" block="CJMCU8118 Gas Drive Mode 1"
+    //% blockGap=2 weight=71
+    export function CJMCUGasDriveMode() {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,1,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,16,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+    }
+
 }
 
