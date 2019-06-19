@@ -203,7 +203,7 @@ namespace selfblock {
     }
 
     /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0x01 */
-    //% blockId="CJMCUGasDrvMode" block="CJMCU8118 Gas Drive Mode 1"
+    //% blockId="CJMCUGasDrvMode" block="CJMCU8118 Gas DrvMode1"
     //% blockGap=2 weight=71
     export function CJMCUGasDrvMode() {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
