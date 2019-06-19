@@ -161,9 +161,22 @@ namespace selfblock {
 	return GasIDno
     }
 
+    /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0xF4 */
+    //% blockId="CJMCUGasAppStart" block="CJMCU8118 Gas AppStart"
+    //% blockGap=2 weight=74
+    export function CJMCUGasAppStart() {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,244,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,0,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+    }
+
     /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0x00 return 1 byte */
     //% blockId="CJMCUGasStatus" block="CJMCU8118 Gas Status"
-    //% blockGap=2 weight=75
+    //% blockGap=2 weight=73
     export function CJMCUGasStatus(): number {
 	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
 	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
@@ -173,6 +186,20 @@ namespace selfblock {
 	let GasStatus = pins.i2cReadNumber(90, NumberFormat.UInt8LE, false)
 	basic.pause(200)
 	return GasStatus
+    }
+
+    /* CJMCU-8118 CCS811 Gas sensor addr 0x5A register 0xE0 return 1 byte */
+    //% blockId="CJMCUGasErrID" block="CJMCU8118 Gas ErrorID"
+    //% blockGap=2 weight=72
+    export function CJMCUGasErrID(): number {
+	pins.setPull(DigitalPin.P19, PinPullMode.PullUp)
+	pins.setPull(DigitalPin.P20, PinPullMode.PullUp)
+	basic.pause(200)
+	pins.i2cWriteNumber(90,224,NumberFormat.UInt8LE,false)
+	basic.pause(200)
+	let GasErrID = pins.i2cReadNumber(90, NumberFormat.UInt8LE, false)
+	basic.pause(200)
+	return GasErrID
     }
 
 }
