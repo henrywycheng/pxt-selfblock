@@ -1,4 +1,4 @@
-{
+﻿﻿{
 
     "selfblock|block": "自訂 sensor",
 
@@ -15,9 +15,10 @@
     "selfblock.G54getGreen|block": "讀取 G54 Green data",
 
     "selfblock.G54getBlue|block": "讀取 G54 Blue data"
-      
+,
     "selfblock.CJMCUTHIDno|block": "讀取 CJMCU8118 TH IDno",
-
-    "selfblock.CJMCUTHConfig|block": "讀取 CJMCU8118 TH Config"
+    "selfblock.CJMCUTHConfig|block": "讀取 CJMCU8118 TH Config",
+    "selfblock.CJMCUTHgetTemp|block": "讀取 CJMCU8118 TH get Temperature",
+    "selfblock.CJMCUTHgetHumid|block": "讀取 CJMCU8118 TH get Humidity"
 
 }
